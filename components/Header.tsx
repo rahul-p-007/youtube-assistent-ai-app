@@ -10,7 +10,11 @@ import {
   useUser,
 } from "@clerk/nextjs";
 import { Button } from "./ui/button";
-
+import { Pixelify_Sans } from "next/font/google";
+const pixelify = Pixelify_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 function UserName() {
   const { user } = useUser();
 
@@ -27,7 +31,7 @@ function Header() {
       <Link href="/" className="flex items-center text-4xl font-thin">
         <Avatar seed="Support Agent" />
         <div className="space-y-1 text-white">
-          <h1>ChatTLy</h1>
+          <h1 className={pixelify.className + " text-4xl"}>ChatTLy</h1>
           <h2 className="text-sm">AI powered chat app</h2>
         </div>
       </Link>

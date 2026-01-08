@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function Sidebar() {
   return (
-    <div className="bg-black text-white p-5">
+    <div className="bg-[#101010] text-white p-5">
       <ul className="gap-5 flex lg:flex-col">
         <li className="flex-1">
           <Link
